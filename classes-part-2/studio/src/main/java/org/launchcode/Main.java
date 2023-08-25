@@ -1,19 +1,18 @@
 package org.launchcode;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Date;
+
 public class Main {
+
     public static void main(String[] args) {
-        Menu menu = new Menu();
+        // write your code here
 
-        MenuItem item1 = new MenuItem("Mac & Cheese Balls", 12.99);
-        MenuItem item2 = new MenuItem("Chocolate Lava Cake", 6.99);
-        MenuItem item3 = new MenuItem("Rib Eye Steak", 21.99);
+        MenuItem chicken = new MenuItem(10.00, "Mac & Cheese Balls", "Appetizer", true);
+        MenuItem turkey = new MenuItem(10.00, "Chocolate Lava Cake", "Dessert", true);
+        ArrayList<MenuItem> plate = new ArrayList<>(Arrays.asList(chicken,turkey));
+        Menu chickenMenu = new Menu(new Date(), plate);
 
-        menu.addItem(item1);
-        menu.addItem(item2);
-        menu.addItem(item3);
-
-        System.out.println("Menu last updated: " + menu.getLastUpdated());
-
-        // Rest of the code remains the same
     }
 }

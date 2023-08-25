@@ -1,19 +1,31 @@
 package org.launchcode;
 
 public class MenuItem {
-    private final String name;
-    private final double price;
+    private double price;
+    private String description;
+    private String category;
+    private boolean isNew;
 
-    public MenuItem(String name, double price) {
-        this.name = name;
+    public MenuItem(double p, String d, String c, boolean iN) {
+        this.price = p;
+        this.description = d;
+        this.category = c;
+        this.isNew = iN;
+    }
+
+    public void setPrice(double price) {
         this.price = price;
     }
 
-    public String getName() {
-        return name;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public double getPrice() {
-        return price;
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public void setNew(boolean aNew) {
+        isNew = aNew;
     }
 }
